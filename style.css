@@ -9,7 +9,7 @@ body{
 .hero{
     height: 99vh;
     width: 100%;
-    background-image: url(Images/Back.png);
+    background-image: url(Images/BACK.png);
     background-size:cover;
     background-position: center;
 }
