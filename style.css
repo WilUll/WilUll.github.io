@@ -63,3 +63,8 @@ nav ul li a:hover{
     margin: 20px 0px 20px;
     font-size: 75px;
 }
+
+.icon {
+    width: 5%;
+    height: 5%;
+}
