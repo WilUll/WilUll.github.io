@@ -1,54 +1,107 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Isopoda Games</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Oswald&family=Source+Sans+Pro&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class= "hero">
-        <nav>
-            <img class="logo" src="Images/IsopodaTEXTLOGOONBLACK01.png" alt="Isopoda Games logo">
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#aboutus">About Us</a></li>
-                <li><a href="games">Games</a></li>
-                <li><a href="#">Contact Us</a></li>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="navbar__container">
+            <a href="#home"><img  id="navbar__logo" src="Images/IsopodaTEXTLOGOONBLACK01.png"></a>
+            <div class="navbar__toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="navbar__menu">
+                <li class="navbar__item">
+                    <a href="#home" class="navbar__links" id="home-page">Home</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="#games" class="navbar__links" id="games-page">Games</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="#about" class="navbar__links" id="about-page">About</a>
+                </li>
+                <li class="navbar__btn">
+                    <a href="#join-discord" class="button" id="signup">Discord</a>
+                </li>
             </ul>
-        </nav>
-        <div class="content">
-            <!-- <h1>Website is still WIP</h1> -->
-            <iframe width="1280" height="720" src="https://www.youtube.com/embed/1E7zdLS4kQI" title="FUNGUY - Teaser GAME TRAILER 2023" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="hero" id="home">
+        <div class="hero__container">
+            <h1 class="hero__heading">IsopodaGames</h1>
+            <p class="hero__description">We make <span>games</span></p>
         </div>
     </div>
-    <div id="aboutus" class="about" #aboutus>
-        <h1>About Us</h1>
-        <h2>In the late summer of 2022 two game creator students decided that they enjoyed making games together so much that Isopoda Games came to life. 
-        </h2>
-        <h2>We both bonded over enjoying quirky and interesting games that made us feel things and we both strive to create experiences much like that for our players. <br>Isopoda Games is a passion project of ours and is something we spend our free time working on together in our home office in Gothenburg, Sweden. </h2>
-        <div class="infopanel">
-            <div>
-                <img class="faces" src="Images/Sandra.png" alt="Sandra">
-                <h1>Sandra Caraan</h1>
-                <h2>Artist</h2>
+
+    <!-- About Section-->
+    <div class="main" id="about">
+        <div class="main__container">
+            <div class="main__img--container">
+                <div class="main__img--card"><img src="Images/IsopodaLOGOTrans01.png"></div>
             </div>
-            <div>
-                <img class="faces" src="Images/William.png" alt="William">
-                <h1>William Ullholm</h1>
-                <h2>Programmer</h2>
+            <div class="main__content">
+                <h1>What do we do?</h1>
+                <h2>We make games</h2>
+                <p>We make games</p>
+            </div>
+        </div>
+        <div class="headshots">
+            <div class="headshot__container">
+                <div class="headshot__img--card"><img src="Images/Sandra.png"></div>
+                <div class="headshot__text--container">
+                    <h1>Sandra</h1>
+                    <h2>Artist</h2>
+                    <p></p>
+                </div>
+            </div>
+            <div class="headshot__container">
+                <div class="headshot__img--card"><img src="Images/William.png"></div>
+                <div class="headshot__text--container">
+                    <h1>William</h1>
+                    <h2>Programmer</h2>
+                    <p>Sample</p>
+                </div>
             </div>
         </div>
     </div>
+
+    <!-- Footer Section
+    <div class="footer__container">
+        <div class="footer__links">
+            <div class="footer__link--wrapper">
+                <div class="footer__link--items">
+                    <h2>Social Media</h2>
+                    <a href="https://www.instagram.com/isopodagames/">Instagram</a>
+                    <a href="https://twitter.com/isopodagames">Twitter</a>
+                    <a href="https://www.linkedin.com/company/isopoda-games">LinkedIn</a>
+                    <a href="mailto:hello@isopodagames.com">Mail Us</a>
+                </div>
+            </div>
+        </div>
+        <section class="social__media">
+            <div class="social__media--wrap">
+                <div class="footer__logo">
+                    <a href="/" id="footer__logo"><img src="Images/IsopodaTEXTLOGOONBLACK01.png"></a>
+                </div>
+                <p class="website__rights">Isopoda Games 2022</p>
+                <div class="social__icons">
+                    <a href="https://www.instagram.com/isopodagames/"><img src="Images/Icons/Insta_LOGO.png"></a>
+                    <a href="https://twitter.com/isopodagames"><img src="Images/Icons/Twitter_LOGO.png"></a>
+                    <a href="https://www.linkedin.com/company/isopoda-games"><img src="Images/Icons/Linkedin_LOGO.png"></a>
+                    <a href="mailto:hello@isopodagames.com"><img src="Images/Icons/Mail_LOGO.png"></a>
+                </div>
+            </div>
+        </section>
+    </div> -->
+    <script src="app.js"></script>
 </body>
-<footer>
-    <a href="https://twitter.com/isopodagames" target="_blank"><img class="icon" src="Images/Icons/Twitter_LOGO.png" alt="Twitter Logo"></a>
-    <a href="https://instagram.com/isopodagames" target="_blank"><img class="icon" src="Images/Icons/Insta_LOGO.png" alt="Instagram Logo"></a>
-    <a href="https://www.linkedin.com/company/isopoda-games/" target="_blank"><img class="icon" src="Images/Icons/Linkedin_LOGO.png" alt="Linkein Logo"></a>
-    <a href="mailto:hello@isopodagames.com"><img class="icon" src="Images/Icons/Mail_LOGO.png" alt="Mail To Logo"></a>
-</footer>
 </html>
