@@ -114,7 +114,7 @@ document.addEventListener("DOMContentLoaded", function() {
   video.addEventListener("timeupdate", function() {
     const remainingTime = video.duration - video.currentTime;
     if (remainingTime <= endRange) {
-      video.currentTime = 0.8;
+      video.currentTime = 0.82;
       video.play();
     }
   });

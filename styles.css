@@ -4,6 +4,13 @@ body, h1, h2, h3, p, ul, li, form {
   padding: 0;
 }
 
+html, body {
+  overflow-x: hidden;
+}
+body {
+  position: relative
+}
+
 /* Global styles */
 body {
   font-family: Arial, sans-serif;
