@@ -1,0 +1,401 @@
+/* Reset some default styles */
+body, h1, h2, h3, p, ul, li, form {
+  margin: 0;
+  padding: 0;
+}
+
+/* Global styles */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.5;
+  background-color: #222;
+  color: #ddd;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 40px;
+}
+
+header {
+  background-color: #111;
+  padding: 20px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+}
+
+.nav-links li {
+  margin: 0 10px;
+}
+
+.nav-links a {
+  color: #ddd;
+  text-decoration: none;
+  position: relative;
+}
+
+.nav-links a::before {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #ddd;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.nav-links a:hover::before {
+  transform: scaleX(1);
+}
+
+.nav-links a:hover {
+  color: #fff;
+}
+
+.nav-links a.active::before {
+  transform: scaleX(1);
+}
+
+/* Home section styles */
+#home {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+#home .video-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+#home .video-container video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+#home h1 {
+  font-size: 36px;
+  color: #ddd;
+  margin-bottom: 20px;
+}
+
+#home p {
+  font-size: 18px;
+  margin-bottom: 40px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #111;
+  color: #ddd;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #333;
+}
+
+/* Games section styles */
+#games {
+  background-color: #333;
+  padding: 80px 0;
+}
+
+#games h2 {
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 40px;
+  color: #ddd;
+}
+
+.game-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 40px;
+}
+
+.game-card {
+  text-align: center;
+}
+
+.game-card img {
+  width: 100%;
+  height: 200px; /* Fixed height for game card images */
+  object-fit: cover;
+  border-radius: 4px;
+  margin-bottom: 20px;
+}
+
+.game-card h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #ddd;
+}
+
+.game-card p {
+  margin-bottom: 20px;
+  color: #ddd;
+}
+
+.game-card a {
+  display: inline-block;
+  padding: 8px 16px;
+  background-color: #111;
+  color: #ddd;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.game-card a:hover {
+  background-color: #333;
+}
+
+/* About section styles */
+#about {
+  background-color: #222;
+  padding: 80px 0;
+}
+
+#about h2 {
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 40px;
+  color: #ddd;
+}
+
+#about p {
+  margin-bottom: 20px;
+  color: #ddd;
+}
+
+/* Contact section styles */
+#contact {
+  background-color: #333;
+  padding: 80px 0;
+}
+
+#contact h2 {
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 40px;
+  color: #ddd;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 4px;
+}
+
+form button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #111;
+  color: #ddd;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+form button:hover {
+  background-color: #333;
+}
+
+/* Employee section styles */
+#employees {
+  background-color: #111;
+  padding: 80px 0;
+}
+
+#employees h2 {
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 40px;
+  color: #ddd;
+}
+
+.employee-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 40px;
+  justify-items: center;
+}
+
+.employee-card {
+  text-align: center;
+  color: #ddd;
+}
+
+.employee-card img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+.employee-card h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.employee-card p {
+  margin-bottom: 10px;
+}
+
+/* Popup styles */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: none;
+  z-index: 9999;
+}
+
+.popup-content {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #111;
+  color: #ddd;
+  border-radius: 4px;
+  padding: 20px;
+  display: none;
+  z-index: 9999;
+}
+
+.popup-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.popup-header h3 {
+  margin: 0;
+}
+
+.popup-close {
+  color: #ddd;
+  text-decoration: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.popup-body {
+  text-align: center;
+}
+
+.image-gallery {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.gallery-prev,
+.gallery-next {
+  display: inline-block;
+  padding: 5px;
+  background-color: #111;
+  color: #ddd;
+  text-decoration: none;
+  font-size: 20px;
+  border-radius: 50%;
+  margin: 0 10px;
+  transition: background-color 0.3s ease;
+}
+
+.gallery-prev:hover,
+.gallery-next:hover {
+  background-color: #333;
+}
+
+.gallery-images {
+  flex-grow: 1;
+  overflow: hidden;
+}
+
+.gallery-images img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.gallery-images img.current-image {
+  transform: translateX(0);
+}
+
+.gallery-images img.next-image {
+  transform: translateX(100%);
+}
+
+.gallery-images img.prev-image {
+  transform: translateX(-100%);
+}
+
+footer {
+  background-color: #222;
+  padding: 20px;
+  color: #ddd;
+  text-align: center;
+}
+
+.social-media {
+  margin-top: 10px;
+}
+
+.social-media a {
+  display: inline-block;
+  margin-right: 10px;
+  font-size: 24px;
+  color: #ddd;
+  transition: color 0.3s ease;
+}
+
+.social-media a:hover {
+  color: #fff;
+}
+
+.social-media a:last-child {
+  margin-right: 0;
+}

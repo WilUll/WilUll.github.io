@@ -1,107 +1,146 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Isopoda Games</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Indie Game Company</title>
+  <script src="https://kit.fontawesome.com/1a58aceb30.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-    <!-- Navbar -->
-    <nav class="navbar">
-        <div class="navbar__container">
-            <a href="#home"><img  id="navbar__logo" src="Images/IsopodaTEXTLOGOONBLACK01.png"></a>
-            <div class="navbar__toggle" id="mobile-menu">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
-            <ul class="navbar__menu">
-                <li class="navbar__item">
-                    <a href="#home" class="navbar__links" id="home-page">Home</a>
-                </li>
-                <li class="navbar__item">
-                    <a href="#games" class="navbar__links" id="games-page">Games</a>
-                </li>
-                <li class="navbar__item">
-                    <a href="#about" class="navbar__links" id="about-page">About</a>
-                </li>
-                <li class="navbar__btn">
-                    <a href="#join-discord" class="button" id="signup">Discord</a>
-                </li>
-            </ul>
-        </div>
+  <header>
+    <nav>
+      <div class="logo">
+        <img src="logo.png" alt="Logo">
+      </div>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#games">Games</a></li>
+        <li><a href="#employees">Employees</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
     </nav>
+  </header>
 
-    <!-- Hero Section -->
-    <div class="hero" id="home">
-        <div class="hero__container">
-            <h1 class="hero__heading">IsopodaGames</h1>
-            <p class="hero__description">We make <span>games</span></p>
-        </div>
+  <section id="home">
+    <div class="container">
+      <h1>Welcome to Indie Game Company</h1>
+      <p>Your gateway to exciting and unique gaming experiences.</p>
+      <div class="video-container">
+        <video src="src/IsopodaGames.mp4" autoplay muted></video>
+      </div>
+      <a href="#games" class="btn">Discover Our Games</a>
     </div>
+  </section>
 
-    <!-- About Section-->
-    <div class="main" id="about">
-        <div class="main__container">
-            <div class="main__img--container">
-                <div class="main__img--card"><img src="Images/IsopodaLOGOTrans01.png"></div>
-            </div>
-            <div class="main__content">
-                <h1>What do we do?</h1>
-                <h2>We make games</h2>
-                <p>We make games</p>
-            </div>
+  <section id="games">
+    <div class="container">
+      <h2>Our Games</h2>
+      <div class="game-list">
+        <!-- Insert game cards here -->
+        <div class="game-card" data-title="Möbel" data-description="Möbel Description LONG">
+          <img src="game1.jpg" alt="Game 1">
+          <h3>Möbel</h3>
+          <p>Möbel Description short</p>
+          <!-- <a href="#" class="btn-learn-more" data-game="game1">Learn More</a> -->
         </div>
-        <div class="headshots">
-            <div class="headshot__container">
-                <div class="headshot__img--card"><img src="Images/Sandra.png"></div>
-                <div class="headshot__text--container">
-                    <h1>Sandra</h1>
-                    <h2>Artist</h2>
-                    <p></p>
-                </div>
-            </div>
-            <div class="headshot__container">
-                <div class="headshot__img--card"><img src="Images/William.png"></div>
-                <div class="headshot__text--container">
-                    <h1>William</h1>
-                    <h2>Programmer</h2>
-                    <p>Sample</p>
-                </div>
-            </div>
+        <div class="game-card" data-title="FunGuy" data-description="FunGuy Description LONG">
+          <img src="game2.jpg" alt="Game 2">
+          <h3>Game 2</h3>
+          <p>Description of Game 2.</p>
+          <!-- <a href="#" class="btn-learn-more" data-game="game2">Learn More</a> -->
         </div>
+        <!-- Add more game cards as needed -->
+      </div>
     </div>
+  </section>
 
-    <!-- Footer Section
-    <div class="footer__container">
-        <div class="footer__links">
-            <div class="footer__link--wrapper">
-                <div class="footer__link--items">
-                    <h2>Social Media</h2>
-                    <a href="https://www.instagram.com/isopodagames/">Instagram</a>
-                    <a href="https://twitter.com/isopodagames">Twitter</a>
-                    <a href="https://www.linkedin.com/company/isopoda-games">LinkedIn</a>
-                    <a href="mailto:hello@isopodagames.com">Mail Us</a>
-                </div>
-            </div>
+  <section id="employees">
+    <div class="container">
+      <h2>Meet Our Employees</h2>
+      <div class="employee-list">
+        <div class="employee-card">
+          <img src="employee1.jpg" alt="Employee 1">
+          <h3>John Doe</h3>
+          <p>Game Developer</p>
         </div>
-        <section class="social__media">
-            <div class="social__media--wrap">
-                <div class="footer__logo">
-                    <a href="/" id="footer__logo"><img src="Images/IsopodaTEXTLOGOONBLACK01.png"></a>
-                </div>
-                <p class="website__rights">Isopoda Games 2022</p>
-                <div class="social__icons">
-                    <a href="https://www.instagram.com/isopodagames/"><img src="Images/Icons/Insta_LOGO.png"></a>
-                    <a href="https://twitter.com/isopodagames"><img src="Images/Icons/Twitter_LOGO.png"></a>
-                    <a href="https://www.linkedin.com/company/isopoda-games"><img src="Images/Icons/Linkedin_LOGO.png"></a>
-                    <a href="mailto:hello@isopodagames.com"><img src="Images/Icons/Mail_LOGO.png"></a>
-                </div>
-            </div>
-        </section>
-    </div> -->
-    <script src="app.js"></script>
+        <div class="employee-card">
+          <img src="employee2.jpg" alt="Employee 2">
+          <h3>Jane Smith</h3>
+          <p>Graphic Designer</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="container">
+      <h2>About Us</h2>
+      <p>Indie Game Company is a passionate team of developers dedicated to creating unique and immersive gaming experiences.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eu tortor sed risus scelerisque cursus a sit amet erat.</p>
+    </div>
+    <figure data-behold-id="U0eaUDeWK3S6aPoOLT8O"></figure>
+<script src="https://w.behold.so/widget.js" type="module"></script>
+  </section>
+
+  <section id="contact">
+    <div class="container">
+      <h2>Contact Us</h2>
+      <p>If you have any questions or inquiries, please feel free to get in touch with us.</p>
+      <form
+      action="https://formspree.io/f/maygnngl"
+      method="POST"
+    >
+      <label>
+        Your email:
+        <input type="email" name="email">
+      </label>
+      <label>
+        Your message:
+        <textarea name="message"></textarea>
+      </label>
+      <!-- your other form fields go here -->
+      <button type="submit">Send</button>
+    </form>
+    </div>
+  </section>
+
+  <div class="popup-overlay"></div>
+
+  <div class="popup-content">
+    <div class="popup-header">
+      <h3>Game Details</h3>
+      <a href="#" class="popup-close">&times;</a>
+    </div>
+    <div class="popup-body">
+      <h2 id="popup-game-title"></h2>
+      <p id="popup-game-description"></p>
+      <div class="image-gallery">
+        <!-- <a href="#" class="gallery-prev">&lt;</a> -->
+        <div class="gallery-images">
+          <img src="" alt="" id="gallery-current-image">
+        </div>
+        <!-- <a href="#" class="gallery-next">&gt;</a> -->
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2023 Indie Game Company. All rights reserved.</p>
+      <div class="social-media">
+        <a href="https://www.instagram.com/IsopodaGames"><i class="fab fa-instagram"></i></a>
+        <a href="https://twitter.com/isopodagames"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.tiktok.com/@isopodagames"><i class="fab fa-tiktok"></i></a>
+        <a href="https://www.linkedin.com/company/isopoda-games/"><i class="fab fa-linkedin"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
+
 </html>
