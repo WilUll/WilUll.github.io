@@ -411,3 +411,172 @@ footer {
   color: #494949;
 }
 
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: #ddd;
+  margin-bottom: 5px;
+  transition: transform  0.3s ease;
+}
+
+
+
+/* Add a media query for screens smaller than 768px */
+@media (max-width: 768px) {
+  body {
+    font-size: 16px;
+  }
+
+  .container, .aboutus {
+    padding: 20px;
+  }
+
+  .logo img {
+    width: 80px;
+    height: 40px;
+  }
+
+  /* .nav-links {
+    flex-direction: column;
+    align-items: center;
+    background-color: #111;
+    position: fixed;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+    transition: height 0.3s ease;
+  } */
+
+  .nav-links {
+    height: 0;
+    animation: collapseHeight 0.5s ease; /* Add animation for collapsing height */
+    flex-direction: column;
+    align-items: center;
+    background-color: #111;
+    position: fixed;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+    padding: 0px, 0px 20px;
+    font-size: 20px;
+  }
+  
+  .nav-links.open {
+    display: flex; /* Show the navigation links when "open" class is added */
+    flex-direction: column;
+    align-items: center;
+    background-color: #111;
+    position: fixed;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+    padding: 0px, 0px 20px;
+    height: auto;
+    font-size: 20px;
+    animation: expandHeight 0.5s ease;
+  }
+
+  @keyframes collapseHeight {
+    0% {
+      height: 150px; /* Start with auto height */
+    }
+    100% {
+      height: 0; /* Gradually collapse to height of 0 */
+    display: none; /* Hide the navigation links by default */
+      
+    }
+  }
+  
+  @keyframes expandHeight {
+    0% {
+      height: 0; /* Start with height at 0 */
+    }
+    100% {
+      height: 150px; /* Gradually expand to auto height */
+    }
+  }
+
+  .hamburger.active .bar:first-child {
+    transform: rotate(-45deg) translate(-5px, 6px);
+  }
+  
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .hamburger.active .bar:last-child {
+    transform: rotate(45deg) translate(-5px, -6px);
+  }
+
+  .hamburger.active + .nav-links {
+    display: flex;
+  }
+
+  .btn {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+
+  #home h1 {
+    font-size: 24px;
+  }
+
+  #home p {
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+
+  .game-card img {
+    height: auto;
+    max-height: 200px;
+    margin-bottom: 10px;
+  }
+
+  .game-card h3 {
+    font-size: 20px;
+    margin-bottom: 5px;
+  }
+
+  .game-card p {
+    margin-bottom: 10px;
+  }
+
+  .employee-card img {
+    width: 120px;
+    height: 120px;
+  }
+
+  .employee-card h3 {
+    font-size: 20px;
+    margin-bottom: 5px;
+  }
+
+  .employee-card p {
+    font-size: 14px;
+  }
+
+  .hamburger {
+    display: block;
+    cursor: pointer;
+  }
+}
+
+/* Adjust the container max-width and padding for smaller screens if needed */
+@media (max-width: 480px) {
+  .container {
+    max-width: 100%;
+    padding: 20px;
+  }
+}
