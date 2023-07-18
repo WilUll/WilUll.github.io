@@ -102,3 +102,23 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 });
+
+document.addEventListener("DOMContentLoaded", function() {
+  // Get the video element
+  const video = document.getElementById("mainVideo");
+
+  // Define the range near the end of the video
+  const endRange = 0.1; // Adjust this value as needed
+
+  // Seek the video to the desired starting point when it nears the end
+  video.addEventListener("timeupdate", function() {
+    const remainingTime = video.duration - video.currentTime;
+    if (remainingTime <= endRange) {
+      video.currentTime = 0.8;
+      video.play();
+    }
+  });
+
+});
+
+
