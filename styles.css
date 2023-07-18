@@ -417,6 +417,9 @@ footer {
 .discret {
   color: #494949;
 }
+.important{
+  color: orange;
+}
 
 .hamburger {
   display: none;
