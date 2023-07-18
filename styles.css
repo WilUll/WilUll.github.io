@@ -425,6 +425,12 @@ footer {
   transition: transform  0.3s ease;
 }
 
+.employee-card .fab{
+  font-size: 24px;
+  color: #ddd;
+  margin: 5px;
+}
+
 
 
 /* Add a media query for screens smaller than 768px */
