@@ -122,7 +122,16 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 
-document.querySelector('.hamburger').addEventListener('click', function() {
+const hamburger = document.querySelector('.hamburger');
+const navLinks = document.querySelector('.nav-links');
+
+hamburger.addEventListener('click', function() {
   this.classList.toggle('active');
-  document.querySelector('.nav-links').classList.toggle('open');
+  navLinks.classList.toggle('open');
+  
+  if (navLinks.classList.contains('open')) {
+    navLinks.classList.remove('closed');
+  } else {
+    navLinks.classList.add('closed');
+  }
 });
