@@ -43,6 +43,8 @@ document.addEventListener("DOMContentLoaded", function() {
     });
   });
 
+  
+
 // Close the popup when the close button is clicked
 const popupClose = document.querySelector(".popup-close");
 popupClose.addEventListener("click", function(event) {
@@ -125,13 +127,41 @@ document.addEventListener("DOMContentLoaded", function() {
 const hamburger = document.querySelector('.hamburger');
 const navLinks = document.querySelector('.nav-links');
 
-hamburger.addEventListener('click', function() {
-  this.classList.toggle('active');
-  navLinks.classList.toggle('open');
-  
-  if (navLinks.classList.contains('open')) {
-    navLinks.classList.remove('closed');
-  } else {
-    navLinks.classList.add('closed');
+  // Function to close the hamburger menu
+  function closeHamburgerMenu() {
+    hamburger.classList.toggle('active');
+    navLinks.classList.toggle('open');
+
+    if (navLinks.classList.contains('open')) {
+      navLinks.classList.remove('closed');
+    } else {
+      navLinks.classList.add('closed');
+    }
   }
+
+  // Event listener for hamburger click
+  hamburger.addEventListener('click', function() {
+    hamburger.classList.toggle('active');
+    navLinks.classList.toggle('open');
+
+    if (navLinks.classList.contains('open')) {
+      navLinks.classList.remove('closed');
+    } else {
+      navLinks.classList.add('closed');
+    }
+  });
+
+  // Event listener for navLinks click
+  navLinks.addEventListener('click', function(event) {
+    // Check if the clicked element is an anchor tag
+    if (event.target.tagName === 'A') {
+      // Close the hamburger menu
+      closeHamburgerMenu();
+    }
 });
+
+window.onbeforeunload = () => {
+  for(const form of document.getElementsByTagName('form')) {
+    form.reset();
+  }
+}
